@@ -1,0 +1,12 @@
+{
+  "name": "boardgame-lending",
+  "version": "1.0.0",
+  "description": "ระบบยืม-คืนบอร์ดเกมและอุปกรณ์แบบเว็บ (1 สิทธิ์/คน, ยืมได้ครั้งละ 2 ชั่วโมง)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

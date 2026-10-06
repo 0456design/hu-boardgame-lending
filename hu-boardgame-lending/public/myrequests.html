@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>คำขอของฉัน | ระบบยืม–คืนบอร์ดเกม</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css"></head>
+<body><a class="skip" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+<div id="site-header"></div>
+<main id="main" class="container">
+  <nav class="crumbs" aria-label="ตำแหน่งปัจจุบัน"><a href="/">หน้าแรก</a> / คำขอของฉัน</nav>
+  <header class="page-head"><div><h1>คำขอของฉัน</h1><p>ตรวจสอบคำขอยืมบอร์ดเกมและอุปกรณ์ที่ส่งไป และดูผลการดำเนินการของเจ้าหน้าที่</p></div></header>
+  <div class="card panel"><form id="sf" role="search">
+    <div class="field"><label for="q">รหัสนักศึกษา</label>
+      <div style="display:flex;gap:12px;flex-wrap:wrap"><input class="input" id="q" style="flex:1;min-width:220px" placeholder="เช่น 6612345678" inputmode="numeric" pattern="[0-9]*" maxlength="20" autocomplete="off"><button class="btn btn-primary" type="submit">ค้นหาคำขอ</button></div>
+      <span class="hint">ใช้รหัสเดียวกับที่ระบุตอนส่งคำขอยืม</span></div></form></div>
+  <section id="summary" class="stats" aria-label="สรุปคำขอ"></section>
+  <div id="kinds" class="tabs" role="group" aria-label="กรองประเภท" style="margin-top:24px"></div>
+  <div id="tabs" class="tabs" role="group" aria-label="กรองรายการ" style="margin-top:12px"></div>
+  <div id="list" class="loans" aria-live="polite"></div>
+</main>
+<div id="site-footer"></div>
+<script src="/common.js"></script><script src="/myrequests.js"></script>
+</body></html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ระบบยืม–คืนบอร์ดเกม | มหาวิทยาลัยหาดใหญ่</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css"></head>
+<body><a class="skip" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+<div id="site-header"></div>
+<main id="main" class="container">
+  <nav class="crumbs" aria-label="ตำแหน่งปัจจุบัน"><a href="/">มหาวิทยาลัยหาดใหญ่</a> / บริการยืม–คืนบอร์ดเกม</nav>
+  <section class="hero" aria-labelledby="h-hero">
+    <div><span class="eyebrow">บริการสำหรับนักศึกษา</span>
+      <h1 id="h-hero">บอร์ดเกมสำหรับการเรียนรู้และกิจกรรม</h1>
+      <p class="lead">ค้นหาเกมที่พร้อมให้ขอยืม ตรวจสอบรายละเอียด แล้วส่งคำขอยืมให้เจ้าหน้าที่ห้องสมุดดำเนินการ</p>
+      <p class="notice" style="margin:0 0 var(--s4)">การส่งคำขอยังไม่ถือว่ายืมสำเร็จ — เจ้าหน้าที่จะตรวจสอบและดำเนินการยืมให้</p>
+      <div class="cta"><a class="btn btn-primary" href="#catalog">ค้นหาบอร์ดเกม</a><a class="btn btn-outline" href="/equipment.html">ยืมอุปกรณ์</a><a class="btn btn-outline" href="/myrequests.html">คำขอของฉัน</a><a class="btn btn-outline" href="/myloans.html">การยืมของฉัน</a></div></div>
+    <aside class="card now-list" aria-labelledby="h-now"><h2 id="h-now">พร้อมให้ขอยืมตอนนี้</h2><div id="now"></div></aside>
+  </section>
+  <section class="stats" id="stats" aria-label="สรุปสถานะ"></section>
+
+  <section class="section" id="catalog" aria-labelledby="h-search">
+    <header><h2 id="h-search">ค้นหาบอร์ดเกม</h2><p>พิมพ์ชื่อเกม หรือเลือกตัวกรองเพื่อหาเกมที่เหมาะกับกลุ่มของคุณ</p></header>
+    <div class="card panel"><form id="filters" role="search" onsubmit="return false">
+      <div class="search-big"><label class="sr" for="q">ค้นหาชื่อเกม</label><input class="input" id="q" type="search" placeholder="ค้นหาชื่อเกม" autocomplete="off"></div>
+      <div class="filters">
+        <div class="field"><label for="f-cat">ประเภทเกม</label><select class="select" id="f-cat"><option value="">ทั้งหมด</option></select></div>
+        <div class="field"><label for="f-pl">จำนวนผู้เล่น</label><select class="select" id="f-pl"><option value="">ทั้งหมด</option><option value="2">2 คน</option><option value="4">3–4 คน</option><option value="6">5–6 คน</option><option value="8">7 คนขึ้นไป</option></select></div>
+        <div class="field"><label for="f-tm">ระยะเวลาเล่น</label><select class="select" id="f-tm"><option value="">ทั้งหมด</option><option value="20">ไม่เกิน 20 นาที</option><option value="45">ไม่เกิน 45 นาที</option><option value="999">มากกว่า 45 นาที</option></select></div>
+        <div class="field"><label for="f-st">สถานะ</label><select class="select" id="f-st"><option value="">ทั้งหมด</option><option value="available">พร้อมให้ขอยืม</option><option value="partial">🟡 มีบางชุดถูกยืม</option><option value="full">ไม่มีชุดว่าง</option><option value="maintenance">⚙️ ซ่อมบำรุง</option></select></div>
+        <button class="btn btn-outline" type="reset" id="reset">ล้างตัวกรอง</button>
+      </div></form></div>
+    <div class="result-bar"><span id="count" aria-live="polite"></span></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+</main>
+<div id="site-footer"></div>
+<script src="/common.js"></script><script src="/faculties.js"></script><script src="/app.js"></script>
+</body></html>
